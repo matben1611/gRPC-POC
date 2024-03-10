@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package location;
+
+service LocationStreamer {
+    rpc StreamLocationInfo(stream LocationInfo) returns (stream LocationInfoResponse) {}
+}
+
+message LocationInfo {
+    string current_datetime = 1;
+    string timezone = 2;
+    string location = 3;
+}
+
+message LocationInfoResponse {
+    string current_datetime = 1;
+    string timezone = 2;
+    string location = 3;
+}
