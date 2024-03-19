@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  grpcpoc:
+    image: grpcserver
+    build:
+      context: .
+      dockerfile: ./Dockerfile

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package network;
+
+service NetworkTraffic {
+    rpc StreamNetworkInfo(stream NetworkRequest) returns (stream NetworkResponse) {}
+}
+
+message NetworkRequest {}
+
+message NetworkResponse {
+    int32 current_traffic = 1;
+    int32 bandwidth = 2;
+}

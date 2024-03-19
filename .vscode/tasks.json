@@ -19,7 +19,7 @@
 				"docker-build"
 			],
 			"python": {
-				"file": "gRPC-POC\\app\\server.py"
+				"file": "gRPC\\app\\server.py"
 			}
 		}
 	]
