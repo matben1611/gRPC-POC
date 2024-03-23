@@ -6,7 +6,7 @@ import network_pb2
 import network_pb2_grpc
 
 def run_network_client():
-    channel = grpc.insecure_channel('localhost:50052')
+    channel = grpc.insecure_channel('localhost:50051')
     stub = network_pb2_grpc.NetworkTrafficStub(channel)
     try:
         responses = stub.StreamNetworkInfo(iter([network_pb2.NetworkRequest()]))
